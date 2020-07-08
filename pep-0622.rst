@@ -248,7 +248,7 @@ the "switch" statement as present in other languages::
             retry(response.location)  # Redirect
         case 401:
             retry(auth=get_credentials())  # Login first
-        case 426:
+        case 429:
             sleep(DELAY)  # Server is swamped, try after a bit
             retry()
         case _:
